@@ -1,0 +1,19 @@
+name: SDK version cron job
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+defaults:
+  run:
+    shell: bash
+    
+jobs:
+  fetch_sdk_data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get JS SDK version
+      run: |
+        echo ---JS SDK---
+        echo
+        curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version
