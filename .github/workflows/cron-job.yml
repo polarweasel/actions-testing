@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get JS SDK version
-      run: |
-        echo "JS SDK version is" `curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'`
+      run: curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'
 
     - name: Get Swift SDK version
       run: |
