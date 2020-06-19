@@ -14,7 +14,9 @@ jobs:
     steps:
     - name: Get JS SDK version
       shell: bash
-      run: ./.github/scripts/check-js-sdk.sh
+      run: |
+        echo $PWD
+        /.github/scripts/check-js-sdk.sh
       # curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'
 
     - name: Get Swift SDK version
