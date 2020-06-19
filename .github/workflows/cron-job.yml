@@ -4,17 +4,20 @@ on:
   schedule:
     - cron: '*/5 * * * *'
 
-defaults:
-  run:
-    shell: bash
+#defaults:
+#  run:
+#    shell: bash
 
 jobs:
   fetch_sdk_data:
     runs-on: ubuntu-latest
     steps:
     - name: Get JS SDK version
-      run: curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'
+      shell: bash
+      run: ./.github/scripts/check-js-sdk.sh
+      # curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'
 
     - name: Get Swift SDK version
+      shell: bash
       run: |
         echo "Swift SDK version is" `curl -s https://raw.githubusercontent.com/pubnub/swift/master/.pubnub.yml | grep ^version | cut -s -d ':' -f 2 | sed 's/\"//g'`
