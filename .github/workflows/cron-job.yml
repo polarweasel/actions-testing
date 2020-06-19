@@ -14,6 +14,8 @@ jobs:
     steps:
     - name: Get JS SDK version
       run: |
-        echo ---JS SDK---
-        echo
         curl -s https://raw.githubusercontent.com/pubnub/javascript/master/.pubnub.yml | grep ^version
+
+    - name: Get Swift SDK version
+      run: |
+        curl -s https://raw.githubusercontent.com/pubnub/swift/master/.pubnub.yml | grep ^version
