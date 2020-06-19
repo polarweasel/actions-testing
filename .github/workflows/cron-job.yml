@@ -2,7 +2,7 @@ name: SDK version cron job
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 defaults:
   run:
