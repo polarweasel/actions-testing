@@ -2,7 +2,8 @@ name: SDK version cron job
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '15 6 */1 * *'
+    # runs at 06:15 UTC (23:15 PDT / 22:15 PST)
 
 jobs:
   fetch_sdk_data:
@@ -10,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Get all SDK versions
-      run: ./.github/scripts/check-sdk-versions.sh
+      run: ./.github/scripts/check-sdk-versions.sh | sort
