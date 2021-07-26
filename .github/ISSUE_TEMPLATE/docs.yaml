@@ -1,0 +1,14 @@
+name: Project1
+description: Choose this template to create a Project1 issue.
+title: "[Docs] Title"
+labels: "area/documentation"
+project: https://github.com/polarweasel/actions-testing/projects/1
+body:
+- type: textarea
+  id: documentation
+  attributes:
+    label: Description
+    placeholder: |
+      **Provide a detailed description of the information you want to update/include in the YugabyteDB docs.**
+  validations:
+    required: true
