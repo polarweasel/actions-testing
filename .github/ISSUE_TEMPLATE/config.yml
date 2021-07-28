@@ -8,4 +8,4 @@ contact_links:
     about: Please report security vulnerabilities here.
   - name: FILE AN ISSUE OMG
     about: Can we actually pre-fill an issue with a project?
-    url: https://github.com/polarweasel/actions-testing/issues/new?assignees=polarweasel&labels=enhancement%2C+question&title=A+pre-filled+title&projects=polarweasel/actions-testing/1%2Cpolarweasel/actions-testing/2
+    url: https://github.com/polarweasel/actions-testing/issues/new?assignees=polarweasel&labels=enhancement%2C+question&title=A+pre-filled+title&projects=polarweasel/actions-testing/1%2Cpolarweasel/actions-testing/2&template=bugreport-form
